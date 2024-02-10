@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BibliotecaRegia.Controller.TelaInicialController">
+   <right>
+      <AnchorPane prefHeight="400.0" prefWidth="370.0" style="-fx-background-color: #ECECE7;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="131.0" layoutY="75.0" />
+            <TextField fx:id="usuarioTextField" alignment="CENTER" layoutX="123.0" layoutY="93.0" prefHeight="37.0" prefWidth="362.0" style="-fx-background-color: transparent; -fx-border-color: #000000; -fx-border-width: 0px 0px 1px 0px;" text="Pesquisar livros">
+               <font>
+                  <Font size="22.0" />
+               </font></TextField>
+            <Label fx:id="loginMensagemLabel" alignment="CENTER" layoutX="35.0" layoutY="236.0" textFill="#050505">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <HBox layoutX="6.0" prefHeight="62.0" prefWidth="608.0" style="-fx-background-color: #EDDECD;">
+               <children>
+                  <ImageView fitHeight="95.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../resources/imagem/logo.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="50.0" prefWidth="396.0" text="BIBLIOTECA RÉGIA" textFill="#863d3d">
+                     <font>
+                        <Font name="System Bold" size="28.0" />
+                     </font>
+                     <padding>
+                        <Insets top="15.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Label>
+                  <ImageView fx:id="mudarDeTela" fitHeight="28.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../resources/imagem/usuario.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="50.0" right="30.0" top="15.0" />
+                     </HBox.margin>
+                  </ImageView>
+               </children>
+            </HBox>
+            <ImageView fitHeight="31.0" fitWidth="38.0" layoutX="492.0" layoutY="109.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../resources/imagem/pesquisar.png" />
+               </image>
+            </ImageView>
+            <ListView layoutX="14.0" layoutY="148.0" prefHeight="210.0" prefWidth="591.0" />
+         </children>
+      </AnchorPane>
+   </right>
+</BorderPane>
