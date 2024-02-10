@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BibliotecaRegia.Controller.OpcaoCadastroController">
+   <children>
+      <Label layoutX="189.0" layoutY="96.0" text="Quem deseja cadastrar?">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <Button fx:id="cadastrarUsuarioButton" layoutX="41.0" layoutY="321.0" mnemonicParsing="false" onAction="#cadastrarUsuarioOnAction" prefHeight="27.0" prefWidth="221.0" style="-fx-background-color: #EDDECD;" text="Cadastrar Usuário">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="cadastrarOperadorButton" layoutX="338.0" layoutY="321.0" mnemonicParsing="false" onAction="#cadastrarOperadorOnAction" prefHeight="27.0" prefWidth="221.0" style="-fx-background-color: #EDDECD;" text="Cadastrar Operador">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Pane prefHeight="75.0" prefWidth="600.0" style="-fx-background-color: #EDDECD;">
+         <children>
+            <Label layoutX="92.0" layoutY="25.0" text="BIBLIOTECA RÉGIA" textFill="#863d3d">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="logo" fitHeight="83.0" fitWidth="88.0" layoutX="6.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../imagens/logo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <ImageView fx:id="credencialUsuario" fitHeight="150.0" fitWidth="200.0" layoutX="52.0" layoutY="169.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../imagens/credencialCadastrar.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="credencialOperador" fitHeight="150.0" fitWidth="200.0" layoutX="348.0" layoutY="169.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../imagens/credencialCadastrar.png" />
+         </image>
+      </ImageView>
+   </children>
+</Pane>
