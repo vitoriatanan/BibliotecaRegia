@@ -26,19 +26,19 @@
       <AnchorPane prefHeight="400.0" prefWidth="370.0" style="-fx-background-color: #ECECE7;" BorderPane.alignment="CENTER">
          <children>
             <Label layoutX="131.0" layoutY="75.0" />
-            <Label layoutX="70.0" layoutY="81.0" text="Olá, faça seu login!">
+            <Label layoutX="67.0" layoutY="77.0" text="Olá, faça seu login!">
                <font>
-                  <Font size="21.0" />
+                  <Font size="22.0" />
                </font>
             </Label>
-            <TextField fx:id="usuarioTextField" layoutX="84.0" layoutY="152.0" prefHeight="26.0" prefWidth="182.0" promptText="Usuário" style="-fx-background-color: transparent; -fx-border-color: #000000; -fx-border-width: 0px 0px 1px 0px;" />
+            <TextField fx:id="idTextField" layoutX="84.0" layoutY="152.0" prefHeight="26.0" prefWidth="182.0" promptText="ID" style="-fx-background-color: transparent; -fx-border-color: #000000; -fx-border-width: 0px 0px 1px 0px;" />
             <PasswordField fx:id="senhaPasswordField" layoutX="84.0" layoutY="194.0" prefHeight="26.0" prefWidth="181.0" promptText="Senha" style="-fx-background-color: transparent; -fx-border-color: #000000; -fx-border-width: 0px 0px 1px 0px;" />
-            <Button fx:id="entrarButton" layoutX="41.0" layoutY="273.0" mnemonicParsing="false" onAction="#bttEntrarOnAction" prefHeight="26.0" prefWidth="225.0" style="-fx-background-color: #EDDECD;" text="Entrar">
+            <Button fx:id="entrarButton" layoutX="41.0" layoutY="273.0" mnemonicParsing="false" onAction="#bttEntrarOnAction" prefHeight="26.0" prefWidth="225.0" style="-fx-background-color: #863d3d;" text="Entrar" textFill="WHITE">
                <font>
                   <Font size="13.0" />
                </font>
             </Button>
-            <Button fx:id="cadastrarButton" layoutX="41.0" layoutY="309.0" mnemonicParsing="false" onAction="#bttCadastrarOnAction" prefHeight="26.0" prefWidth="225.0" style="-fx-background-color: #EDDECD;" text="Cadastrar">
+            <Button fx:id="cancelarButton" layoutX="41.0" layoutY="309.0" mnemonicParsing="false" onAction="#bttCancelarOnAction" prefHeight="26.0" prefWidth="225.0" style="-fx-background-color: #863d3d;" text="Cancelar" textFill="WHITE">
                <font>
                   <Font size="13.0" />
                </font>
@@ -48,8 +48,17 @@
                   <Font size="13.0" />
                </font>
             </Label>
-            <Label layoutX="33.0" layoutY="158.0" text="Usuário" />
-            <Label layoutX="39.0" layoutY="202.0" text="Senha" />
+            <ImageView fx:id="usuarioImageView" fitHeight="34.0" fitWidth="32.0" layoutX="43.0" layoutY="145.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../resources/imagem/usuario.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="cadeadoImageView" fitHeight="32.0" fitWidth="32.0" layoutX="43.0" layoutY="188.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../resources/imagem/cadeado.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="erroLabel" layoutX="140.0" layoutY="237.0" text="Label" />
          </children>
       </AnchorPane>
    </center>
