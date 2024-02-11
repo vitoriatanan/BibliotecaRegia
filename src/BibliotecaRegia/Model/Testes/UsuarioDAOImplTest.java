@@ -20,8 +20,8 @@ public class UsuarioDAOImplTest {
     @BeforeEach
     public void setUp() {
         usuarioDAO = new UsuarioDAOImpl();
-        usuarioTeste = new Usuario("Lara Levy","Rua A", "87877", "85478");
-        usuarioTeste2 = new Usuario("Edward House", "Rua B", "87569", "788");
+        usuarioTeste = new Usuario("Lara Levy","Rua A", "87877");
+        usuarioTeste2 = new Usuario("Edward House", "Rua B", "87569");
 
     }
 
