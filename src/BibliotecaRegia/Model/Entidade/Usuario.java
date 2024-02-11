@@ -7,18 +7,16 @@ import java.util.List;
 
 public class Usuario extends Pessoa {
     private String id;
-    private String senhaAcesso;
     private String endereco;
     private String telefone;
     private List<EmprestimoDevolucao> emprestimos;
     private boolean contaBloqueada;
     private double multa;
 
-    public Usuario(String nome, String endereco, String telefone, String senhaAcesso) {
+    public Usuario(String nome, String endereco, String telefone) {
         super(nome);
         this.endereco = endereco;
         this.telefone = telefone;
-        this.senhaAcesso = senhaAcesso;
         this.emprestimos = new ArrayList<>();
         this.contaBloqueada = false;
         this.multa = 0;
@@ -72,11 +70,4 @@ public class Usuario extends Pessoa {
         this.multa = multa;
     }
 
-    public String getSenhaAcesso() {
-        return senhaAcesso;
-    }
-
-    public void setSenhaAcesso(String senhaAcesso) {
-        this.senhaAcesso = senhaAcesso;
-    }
 }
