@@ -31,12 +31,12 @@ public class PerfilBibliotecarioController implements Initializable {
         Image iconePerfilImage = new Image(iconePerfilFile.toURI().toString());
         perfilImageView.setImage(iconePerfilImage);
 
-        //carregamento ícone registrar livros
-        File iconeLivroFile = new File("resources/imagem/livrosWhite.png");
+        //carregamento ícone gerenciar acervo
+        File iconeLivroFile = new File("resources/imagem/livroWhite.png");
         Image iconeLivroImage = new Image(iconeLivroFile.toURI().toString());
         livroImageView.setImage(iconeLivroImage);
 
-        //carregamento ícone gerenciar livros
+        //carregamento ícone pesquisar livros
         File iconePesquisarFile = new File("resources/imagem/pesquisarWhite.png");
         Image iconePesquisarImage = new Image(iconePesquisarFile.toURI().toString());
         pesquisarImageView.setImage(iconePesquisarImage);
@@ -45,11 +45,6 @@ public class PerfilBibliotecarioController implements Initializable {
         File iconeSairFile = new File("resources/imagem/sair.png");
         Image iconeSairImage = new Image(iconeSairFile.toURI().toString());
         sairImageView.setImage(iconeSairImage);
-
-
-
-
-
 
     }
 
