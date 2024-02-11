@@ -59,6 +59,6 @@
             <Image url="@../../../resources/imagem/credencial.png" />
          </image>
       </ImageView>
-      <Button fx:id="gerenciarUsuariosBotao" layoutX="199.0" layoutY="323.0" mnemonicParsing="false" onAction="#gerenciarUsuariosOnAction" prefHeight="27.0" prefWidth="155.0" style="-fx-border-color: #000000; -fx-background-color: #863d3d;" text="GERENCIAR USUÁRIOS" textFill="WHITE" />
+      <Button fx:id="gerenciarUsuariosBotao" layoutX="274.0" layoutY="329.0" mnemonicParsing="false" onAction="#gerenciarUsuariosOnAction" prefHeight="28.0" prefWidth="161.0" style="-fx-border-color: #000000; -fx-background-color: #863d3d;" text="GERENCIAR USUÁRIOS" textFill="WHITE" />
     </children>
 </AnchorPane>
