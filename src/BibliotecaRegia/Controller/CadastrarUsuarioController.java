@@ -20,7 +20,7 @@ public class CadastrarUsuarioController {
     private URL location;
 
     @FXML
-    private Button cadastrarBotao;
+    private Button adicionarBotao;
 
     @FXML
     private TextField enderecoText;
@@ -40,7 +40,7 @@ public class CadastrarUsuarioController {
     @FXML
     void bttCadastrarOnAction(ActionEvent event) { //createDAO do Usuario
        try {
-           Usuario novoUsuario = new Usuario(nomeText.getText(), enderecoText.getText(), telefoneText.getText(), senhaText.getText());
+           Usuario novoUsuario = new Usuario(nomeText.getText(), enderecoText.getText(), telefoneText.getText());
            System.out.println(novoUsuario.getNome());
 
            this.clearAll();
@@ -63,7 +63,7 @@ public class CadastrarUsuarioController {
 
     @FXML
     void initialize() {
-        assert cadastrarBotao != null : "fx:id=\"cadastrarBotao\" was not injected: check your FXML file 'cadastrarUsuario.fxml'.";
+        assert adicionarBotao != null : "fx:id=\"adicionarBotao\" was not injected: check your FXML file 'cadastrarUsuario.fxml'.";
         assert enderecoText != null : "fx:id=\"enderecoText\" was not injected: check your FXML file 'cadastrarUsuario.fxml'.";
         assert nomeText != null : "fx:id=\"nomeText\" was not injected: check your FXML file 'cadastrarUsuario.fxml'.";
         assert senhaText != null : "fx:id=\"senhaText\" was not injected: check your FXML file 'cadastrarUsuario.fxml'.";
