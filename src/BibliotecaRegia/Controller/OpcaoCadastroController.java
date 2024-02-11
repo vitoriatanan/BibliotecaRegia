@@ -56,6 +56,7 @@ public class OpcaoCadastroController implements Initializable {
          File logoFile = new File("imagens/logo.png");
         Image logoImage = new Image(logoFile.toURI().toString());
         logo.setImage(logoImage);
+
         // Carrega a imagem da credencial do usuário
         File credencialUsuarioFile = new File("imagens/credencialCadastrar.png");
         Image credencialUsuarioImage = new Image(credencialUsuarioFile.toURI().toString());
