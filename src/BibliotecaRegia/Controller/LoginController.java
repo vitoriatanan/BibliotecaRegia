@@ -1,7 +1,9 @@
 package BibliotecaRegia.Controller;
 
 import BibliotecaRegia.Main;
+import BibliotecaRegia.Model.DAO.Administrador.AdministradorDAOImpl;
 import BibliotecaRegia.Model.DAO.Bibliotecario.BibliotecarioDAOImpl;
+import BibliotecaRegia.Model.Entidade.Administrador;
 import BibliotecaRegia.Model.Entidade.Bibliotecario;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -12,6 +14,7 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.stage.Stage;
 
 import java.io.File;
 import java.io.IOException;
@@ -47,10 +50,16 @@ public class LoginController implements Initializable {
 
     @FXML
     private void bttCancelarOnAction(ActionEvent event) {
-
-
+        Stage stage = (Stage) cancelarButton.getScene().getWindow();
+        stage.close();
     }
 
+    /*
+    * Valida a entrada de dados nas caixas de texto.
+    * Faz a busca do id e senha do operador, se estiver
+    * correto, troca de tela, caso contrário exibe uma
+    * mensagem de erro.
+    * */
     @FXML
     void bttEntrarOnAction(ActionEvent event) throws IOException, ClassNotFoundException {
         if (event.getSource() == entrarButton) {
@@ -60,31 +69,18 @@ public class LoginController implements Initializable {
             BibliotecarioDAOImpl bibliotecarioDAO = new BibliotecarioDAOImpl();
             Bibliotecario bibliotecario = bibliotecarioDAO.read(id);
 
-            if (bibliotecario != null && bibliotecario.getSenhaAcesso().equals(senha)) {
+            AdministradorDAOImpl administradorDAO = new AdministradorDAOImpl();
+            Administrador administrador = administradorDAO.read(id);
+
+            if (bibliotecario != null && bibliotecario.getSenhaAcesso().equals(senha) ||
+                    administrador != null && administrador.getSenhaAcesso().equals(senha)) {
                 Main.navegacaoEntreTelas("perfilBibliotecario");
 
             } else {
-                System.out.println("ID ou senha incorretos");
+                this.erroLabel.setText("ID ou senha incorretos");
             }
         }
-
     }
-
-    /*private void validarLogin() throws IOException, ClassNotFoundException {
-        String id = idTextField.getText();
-        String senha = senhaPasswordField.getText();
-
-
-        BibliotecarioDAOImpl bibliotecarioDAO = new BibliotecarioDAOImpl();
-        Bibliotecario bibliotecario = bibliotecarioDAO.read(id);
-
-        if (bibliotecario != null && bibliotecario.getSenhaAcesso().equals(senha)) {
-            System.out.println("Login bem-sucedido");
-
-
-        } else {
-            System.out.println("ID ou senha incorretos");
-        }*/
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle)  {
