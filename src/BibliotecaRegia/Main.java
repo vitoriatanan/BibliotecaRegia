@@ -13,7 +13,7 @@ import java.io.IOException;
 public class Main extends Application {
 
     private static Scene loginScene;
-    private static Scene opcaoCadastroScene, cadastrarUsuarioScene, cadastrarOperadorScene;
+    private static Scene opcaoCadastroScene, cadastrarUsuarioScene, cadastrarOperadorScene, perfilBibliotecarioScene;
     private static Stage primaryStage;
 
     @Override
@@ -25,6 +25,13 @@ public class Main extends Application {
        Parent login = FXMLLoader.load(getClass().getResource("/BibliotecaRegia/View/login.fxml"));
        loginScene = new Scene(login);
 
+       //perfil bibliotecario
+        Parent perfilBibliotecario = FXMLLoader.load(getClass().getResource("/BibliotecaRegia/View/perfilBibliotecario.fxml"));
+        perfilBibliotecarioScene = new Scene(perfilBibliotecario);
+
+
+       /*
+
        //opcção de cadastro (usuário/operador)
        Parent opcaoCadastro = FXMLLoader.load(getClass().getResource("/BibliotecaRegia/View/opcaoCadastro.fxml"));
        opcaoCadastroScene = new Scene(opcaoCadastro);
@@ -35,7 +42,7 @@ public class Main extends Application {
 
         //cadastrar operador
         Parent cadastrarOperador = FXMLLoader.load(getClass().getResource("/BibliotecaRegia/View/cadastrarOperador.fxml"));
-        cadastrarOperadorScene = new Scene(cadastrarOperador);
+        cadastrarOperadorScene = new Scene(cadastrarOperador);*/
 
 
         stage.initStyle(StageStyle.DECORATED);
@@ -60,14 +67,8 @@ public class Main extends Application {
 
     public static void navegacaoEntreTelas(String nomeTela) {
         switch (nomeTela) {
-            case ("opcaoDeCadastro"):
-                primaryStage.setScene(opcaoCadastroScene);
-                break;
-            case ("cadastrarUsuario"):
-                primaryStage.setScene(cadastrarUsuarioScene);
-                break;
-            case ("cadastrarOperador"):
-                primaryStage.setScene(cadastrarOperadorScene);
+            case ("perfilBibliotecario"):
+                primaryStage.setScene(perfilBibliotecarioScene);
                 break;
         }
     }
