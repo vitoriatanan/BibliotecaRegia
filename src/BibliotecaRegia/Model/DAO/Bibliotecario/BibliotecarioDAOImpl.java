@@ -26,6 +26,15 @@ public class BibliotecarioDAOImpl implements BibliotecarioDAO {
         this.bibliotecarios = new ArrayList<>();
         this.livroDAO = new LivroDAOImpl();
         this.usuarioDAO = new UsuarioDAOImpl();
+
+        Bibliotecario bibliotecarioPadrao = new Bibliotecario("", "Bibliotecário", "bibli");
+        bibliotecarioPadrao.setId("bibli");
+        this.bibliotecarios.add(bibliotecarioPadrao);
+        try {
+            Serializador.salvarDados("bibliotecario.dat", this.bibliotecarios);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     /**
