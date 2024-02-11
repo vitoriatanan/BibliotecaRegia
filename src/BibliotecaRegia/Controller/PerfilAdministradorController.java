@@ -3,8 +3,12 @@ package BibliotecaRegia.Controller;
 import java.io.File;
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import BibliotecaRegia.Main;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
@@ -17,8 +21,27 @@ public class PerfilAdministradorController implements Initializable {
     private URL location;
 
     @FXML
+    private Button gerenciarUsuariosBotao;
+
+    @FXML
     private ImageView credencialImageView, livroImageView, pesquisarImageView, sairImageView, perfilImageView;
-    
+
+    @FXML
+    void gerenciarAcervoOnAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    void pesquisarLivrosOnAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    void gerenciarUsuariosOnAction(ActionEvent event) {
+        if (event.getSource() == gerenciarUsuariosBotao) {
+            Main.navegacaoEntreTelas("gerenciarUsuarios");
+        }
+    }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
