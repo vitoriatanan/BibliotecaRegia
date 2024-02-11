@@ -13,7 +13,8 @@ import java.io.IOException;
 public class Main extends Application {
 
     private static Scene loginScene;
-    private static Scene opcaoCadastroScene, cadastrarUsuarioScene, cadastrarOperadorScene, perfilBibliotecarioScene;
+    private static Scene opcaoCadastroScene, cadastrarUsuarioScene, cadastrarOperadorScene, perfilBibliotecarioScene,
+                        perfilAdministradorScene;
     private static Stage primaryStage;
 
     @Override
@@ -28,6 +29,11 @@ public class Main extends Application {
        //perfil bibliotecario
         Parent perfilBibliotecario = FXMLLoader.load(getClass().getResource("/BibliotecaRegia/View/perfilBibliotecario.fxml"));
         perfilBibliotecarioScene = new Scene(perfilBibliotecario);
+
+        //perfil administrador
+        Parent perfilAdministrador = FXMLLoader.load(getClass().getResource("/BibliotecaRegia/View/perfilAdministrador.fxml"));
+        perfilAdministradorScene = new Scene(perfilAdministrador);
+
 
 
        /*
@@ -69,6 +75,9 @@ public class Main extends Application {
         switch (nomeTela) {
             case ("perfilBibliotecario"):
                 primaryStage.setScene(perfilBibliotecarioScene);
+                break;
+            case ("perfilAdministrador"):
+                primaryStage.setScene(perfilAdministradorScene);
                 break;
         }
     }
