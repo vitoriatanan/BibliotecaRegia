@@ -27,6 +27,7 @@ public class BibliotecarioDAOImpl implements BibliotecarioDAO {
         this.livroDAO = new LivroDAOImpl();
         this.usuarioDAO = new UsuarioDAOImpl();
 
+        //Inicialização de um bibliotecário padrão no sistema
         Bibliotecario bibliotecarioPadrao = new Bibliotecario("", "Bibliotecário", "bibli");
         bibliotecarioPadrao.setId("bibli");
         this.bibliotecarios.add(bibliotecarioPadrao);
