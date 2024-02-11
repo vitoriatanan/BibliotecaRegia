@@ -14,7 +14,7 @@ public class Main extends Application {
 
     private static Scene loginScene;
     private static Scene opcaoCadastroScene, cadastrarUsuarioScene, cadastrarOperadorScene, perfilBibliotecarioScene,
-                        perfilAdministradorScene;
+                        perfilAdministradorScene, gerenciarUsuariosScene;
     private static Stage primaryStage;
 
     @Override
@@ -33,6 +33,12 @@ public class Main extends Application {
         //perfil administrador
         Parent perfilAdministrador = FXMLLoader.load(getClass().getResource("/BibliotecaRegia/View/perfilAdministrador.fxml"));
         perfilAdministradorScene = new Scene(perfilAdministrador);
+
+        //gerenciar usuários
+        Parent gerenciarUsuarios = FXMLLoader.load(getClass().getResource("/BibliotecaRegia/View/gerenciarUsuarios.fxml"));
+        gerenciarUsuariosScene = new Scene(gerenciarUsuarios);
+
+
 
 
 
@@ -78,6 +84,9 @@ public class Main extends Application {
                 break;
             case ("perfilAdministrador"):
                 primaryStage.setScene(perfilAdministradorScene);
+                break;
+            case ("gerenciarUsuarios"):
+                primaryStage.setScene(gerenciarUsuariosScene);
                 break;
         }
     }
