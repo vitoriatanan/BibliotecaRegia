@@ -72,10 +72,10 @@ public class LoginController implements Initializable {
             AdministradorDAOImpl administradorDAO = new AdministradorDAOImpl();
             Administrador administrador = administradorDAO.read(id);
 
-            if (bibliotecario != null && bibliotecario.getSenhaAcesso().equals(senha) ||
-                    administrador != null && administrador.getSenhaAcesso().equals(senha)) {
+            if (bibliotecario != null && bibliotecario.getSenhaAcesso().equals(senha)) {
                 Main.navegacaoEntreTelas("perfilBibliotecario");
-
+            } else if (administrador != null && administrador.getSenhaAcesso().equals(senha)) {
+                Main.navegacaoEntreTelas("perfilAdministrador");
             } else {
                 this.erroLabel.setText("ID ou senha incorretos");
             }
