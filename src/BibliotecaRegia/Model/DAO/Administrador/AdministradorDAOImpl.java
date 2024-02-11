@@ -2,10 +2,7 @@ package BibliotecaRegia.Model.DAO.Administrador;
 
 
 import BibliotecaRegia.FileData.Entidade.Serializador;
-import BibliotecaRegia.Model.Entidade.Administrador;
-import BibliotecaRegia.Model.Entidade.EmprestimoDevolucao;
-import BibliotecaRegia.Model.Entidade.Livro;
-import BibliotecaRegia.Model.Entidade.Usuario;
+import BibliotecaRegia.Model.Entidade.*;
 import BibliotecaRegia.Model.DAO.Livro.LivroDAOImpl;
 import BibliotecaRegia.Model.DAO.Usuario.UsuarioDAOImpl;
 
@@ -25,6 +22,16 @@ public class AdministradorDAOImpl implements AdministradorDAO {
         this.adms = new ArrayList<>();
         this.livroDAO = new LivroDAOImpl();
         this.usuarioDAO = new UsuarioDAOImpl();
+
+        //Inicialização de um administrador padrão no sistema
+        Administrador administradorPadrao = new Administrador("", "Administrador", "admim");
+        administradorPadrao.setId("admim");
+        this.adms.add(administradorPadrao);
+        try {
+            Serializador.salvarDados("administrador.dat", this.adms);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 
