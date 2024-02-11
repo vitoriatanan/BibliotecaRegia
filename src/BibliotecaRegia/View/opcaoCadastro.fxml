@@ -9,44 +9,43 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BibliotecaRegia.Controller.OpcaoCadastroController">
    <children>
-      <Label layoutX="189.0" layoutY="96.0" text="Quem deseja cadastrar?">
-         <font>
-            <Font size="21.0" />
-         </font>
-      </Label>
-      <Button fx:id="cadastrarUsuarioButton" layoutX="41.0" layoutY="321.0" mnemonicParsing="false" onAction="#cadastrarUsuarioOnAction" prefHeight="27.0" prefWidth="221.0" style="-fx-background-color: #EDDECD;" text="Cadastrar Usuário">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Button>
-      <Button fx:id="cadastrarOperadorButton" layoutX="338.0" layoutY="321.0" mnemonicParsing="false" onAction="#cadastrarOperadorOnAction" prefHeight="27.0" prefWidth="221.0" style="-fx-background-color: #EDDECD;" text="Cadastrar Operador">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Button>
       <Pane prefHeight="75.0" prefWidth="600.0" style="-fx-background-color: #EDDECD;">
          <children>
-            <Label layoutX="92.0" layoutY="25.0" text="BIBLIOTECA RÉGIA" textFill="#863d3d">
+            <Label layoutX="91.0" layoutY="21.0" text="BIBLIOTECA RÉGIA" textFill="#863d3d">
                <font>
-                  <Font name="System Bold" size="25.0" />
+                  <Font name="System Bold" size="28.0" />
                </font>
             </Label>
-            <ImageView fx:id="logo" fitHeight="83.0" fitWidth="88.0" layoutX="6.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="logo" fitHeight="75.0" fitWidth="75.0" layoutX="8.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../imagens/logo.png" />
+                  <Image url="@../../../resources/imagem/logo.png" />
                </image>
             </ImageView>
          </children>
       </Pane>
-      <ImageView fx:id="credencialUsuario" fitHeight="150.0" fitWidth="200.0" layoutX="52.0" layoutY="169.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="credencialUsuario" fitHeight="150.0" fitWidth="200.0" layoutX="80.0" layoutY="138.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../imagens/credencialCadastrar.png" />
+            <Image url="@../../../../../../../Downloads/usuarios-alt.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="credencialOperador" fitHeight="150.0" fitWidth="200.0" layoutX="348.0" layoutY="169.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="credencialOperador" fitHeight="150.0" fitWidth="200.0" layoutX="373.0" layoutY="138.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../imagens/credencialCadastrar.png" />
+            <Image url="@../../../../../../../Downloads/homem-empregado.png" />
          </image>
       </ImageView>
+      <Pane layoutY="325.0" prefHeight="75.0" prefWidth="600.0" style="-fx-background-color: #EDDECD;">
+         <children>
+            <Button fx:id="adicionarBotao" layoutX="65.0" layoutY="24.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="196.0" style="-fx-background-color: #863d3d;" text="Gerenciamento Usuários" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="adicionarBotao1" layoutX="366.0" layoutY="24.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="196.0" style="-fx-background-color: #863d3d;" text="Gerenciamento Operadores" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
    </children>
 </Pane>
