@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.TextField?>
@@ -8,32 +9,18 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BibliotecaRegia.Controller.TelaInicialController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BibliotecaRegia.Controller.TelaInicialController">
    <right>
-      <AnchorPane prefHeight="400.0" prefWidth="370.0" style="-fx-background-color: #ECECE7;" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="400.0" prefWidth="370.0" style="-fx-background-color: #863d3d;" BorderPane.alignment="CENTER">
          <children>
-            <Label layoutX="131.0" layoutY="75.0" />
-            <TextField fx:id="usuarioTextField" alignment="CENTER" layoutX="123.0" layoutY="93.0" prefHeight="37.0" prefWidth="362.0" promptText="Pesquisar Livros" style="-fx-background-color: transparent; -fx-border-color: #000000; -fx-border-width: 0px 0px 1px 0px;">
-               <font>
-                  <Font size="22.0" />
-               </font></TextField>
-            <Label fx:id="loginMensagemLabel" alignment="CENTER" layoutX="35.0" layoutY="236.0" textFill="#050505">
-               <font>
-                  <Font size="13.0" />
-               </font>
-            </Label>
-            <ImageView fitHeight="31.0" fitWidth="38.0" layoutX="492.0" layoutY="109.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../resources/imagem/pesquisar.png" />
-               </image>
-            </ImageView>
-            <ListView layoutX="14.0" layoutY="148.0" prefHeight="210.0" prefWidth="585.0" />
-            <Pane layoutX="6.0" prefHeight="74.0" prefWidth="600.0" style="-fx-background-color: #EDDECD;">
+            <ListView fx:id="ListLivros" layoutX="61.0" layoutY="89.0" prefHeight="304.0" prefWidth="558.0" />
+            <Pane layoutX="35.0" prefHeight="74.0" prefWidth="600.0" style="-fx-background-color: #EDDECD;">
                <children>
-                  <ImageView fitHeight="95.0" fitWidth="70.0" layoutX="8.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="logo" fitHeight="95.0" fitWidth="70.0" layoutX="8.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../resources/imagem/logo.png" />
                      </image>
@@ -46,13 +33,83 @@
                         <Insets top="15.0" />
                      </padding>
                   </Label>
-                  <ImageView fx:id="mudarDeTela" fitHeight="58.0" fitWidth="57.0" layoutX="514.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../resources/imagem/usuario.png" />
-                     </image>
-                  </ImageView>
+                  <Button fx:id="Onclick" ellipsisString="" layoutX="523.0" layoutY="10.0" mnemonicParsing="false" onAction="#bttmudarParaLogin" prefHeight="55.0" prefWidth="61.0" style="-fx-background-color: #EDDECD;" text="BttLogin">
+                     <graphic>
+                        <ImageView fx:id="mudarDeTela" fitHeight="47.0" fitWidth="67.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../resources/imagem/usuario.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
                </children>
             </Pane>
+            <HBox layoutX="38.0" layoutY="82.0" prefHeight="318.0" prefWidth="22.0" style="-fx-background-color: #863d3d;" />
+            <HBox layoutX="36.0" layoutY="74.0" prefHeight="16.0" prefWidth="600.0" style="-fx-background-color: #863d3d;" />
+            <HBox layoutX="38.0" layoutY="392.0" prefHeight="18.0" prefWidth="600.0" style="-fx-background-color: #863d3d;">
+               <children>
+                  <Label fx:id="labelMensagem" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets left="250.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <AnchorPane layoutX="62.0" layoutY="90.0" prefHeight="46.0" prefWidth="553.0" style="-fx-background-color: #EDDECD;">
+               <children>
+                  <Label ellipsisString="" layoutX="27.0" layoutY="14.0" prefHeight="18.0" prefWidth="43.0" text="TÍTULO" textFill="#863d3d">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="129.0" layoutY="14.0" text="ISBN" textFill="#863d3d">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label ellipsisString="" layoutX="207.0" layoutY="14.0" text="EDITORA" textFill="#863d3d">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="286.0" layoutY="14.0" text="CATEGORIA" textFill="#863d3d">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="394.0" layoutY="14.0" text="ANO" textFill="#863d3d">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="474.0" layoutY="14.0" text="AUTOR" textFill="#863d3d">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <TextField fx:id="tituloPesquisa" layoutX="79.0" layoutY="163.0" prefHeight="26.0" prefWidth="75.0" style="-fx-background-color: #863d3d; -fx-text-inner-color: white;" />
+            <TextField fx:id="ISBNPesquisa" layoutX="260.0" layoutY="163.0" prefHeight="26.0" prefWidth="74.0" style="-fx-background-color: #863d3d; -fx-text-inner-color: white;" />
+            <TextField fx:id="editoraPesquisa" layoutX="168.0" layoutY="163.0" prefHeight="26.0" prefWidth="76.0" style="-fx-background-color: #863d3d; -fx-text-inner-color: white;" />
+            <TextField fx:id="categoriaPesquisa" layoutX="349.0" layoutY="163.0" prefHeight="26.0" prefWidth="73.0" style="-fx-background-color: #863d3d; -fx-text-inner-color: white;" />
+            <TextField fx:id="anoPesquisa" layoutX="435.0" layoutY="163.0" prefHeight="26.0" prefWidth="74.0" style="-fx-background-color: #863d3d; -fx-text-inner-color: white;" />
+            <TextField fx:id="autorPesquisa" layoutX="528.0" layoutY="163.0" prefHeight="26.0" prefWidth="74.0" style="-fx-background-color: #863d3d; -fx-text-inner-color: white;" />
+            <HBox layoutX="616.0" layoutY="75.0" prefHeight="338.0" prefWidth="22.0" style="-fx-background-color: #863d3d;" />
+            <TextField fx:id="PesquisarLivros" layoutX="245.0" layoutY="234.0" promptText="Pesquisar livros..." style="-fx-background-color: #863d3d; -fx-text-inner-color: white;">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </TextField>
+            <Button fx:id="buttonPesquisar" ellipsisString="" layoutX="415.0" layoutY="231.0" mnemonicParsing="false" onAction="#ListOnAction" style="-fx-background-color: #863d3d;">
+               <graphic>
+                  <ImageView fx:id="LupaPesquisar" fitHeight="24.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../resources/imagem/pesquisarWhite.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
          </children>
       </AnchorPane>
    </right>

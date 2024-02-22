@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #EDDECD;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BibliotecaRegia.Controller.RelatorioController">
+   <children>
+      <HBox layoutX="1.0" prefHeight="100.0" prefWidth="600.0" style="-fx-background-color: #EDDECD;">
+         <children>
+            <ImageView fx:id="logo" fitHeight="92.0" fitWidth="160.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../resources/imagem/logo.png" />
+               </image>
+            </ImageView>
+            <Label text="BIBLIOTECA RÉGIA" textFill="#863d3d">
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="15.0" top="30.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+      <HBox layoutY="101.0" prefHeight="48.0" prefWidth="600.0" style="-fx-background-color: #863d3d;" />
+      <TextField fx:id="numeroLivros" alignment="CENTER" layoutX="14.0" layoutY="116.0" style="-fx-background-color: transparent; -fx-text-inner-color: white;" text="Número de livros:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="emprestadosTextField" layoutX="43.0" layoutY="178.0" prefHeight="26.0" prefWidth="90.0" />
+      <TextField fx:id="atrasadosTextField" layoutX="43.0" layoutY="236.0" prefHeight="26.0" prefWidth="90.0" />
+      <TextField fx:id="reservadosTextField" layoutX="48.0" layoutY="301.0" prefHeight="26.0" prefWidth="90.0" />
+      <TextField fx:id="historico" alignment="CENTER" layoutX="206.0" layoutY="116.0" prefHeight="26.0" prefWidth="162.0" style="-fx-background-color: transparent; -fx-text-inner-color: white;" text="Histórico de empréstimo:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="idTextField" layoutX="234.0" layoutY="236.0" prefHeight="26.0" prefWidth="70.0" promptText="ID" />
+      <TextField fx:id="tituloTextField" layoutX="206.0" layoutY="178.0" prefHeight="26.0" prefWidth="131.0" promptText="Digite aqui o Titulo" />
+      <TextField fx:id="livrosPopulares" alignment="CENTER" layoutX="404.0" layoutY="116.0" style="-fx-background-color: transparent; -fx-text-inner-color: white;" text="Livros mais populares:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </TextField>
+      <HBox layoutX="1.0" layoutY="352.0" prefHeight="48.0" prefWidth="600.0" style="-fx-background-color: #863d3d;">
+         <children>
+            <Button fx:id="buttonVoltar" ellipsisString="" mnemonicParsing="false" onAction="#VoltarOnAction" prefHeight="44.0" prefWidth="37.0" text="Button">
+               <graphic>
+                  <ImageView fx:id="voltarImagem" fitHeight="36.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../resources/imagem/voltar.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Label fx:id="labelMensagem" textFill="WHITE" />
+            <Button fx:id="buttonGerarrelatorio" mnemonicParsing="false" onAction="#gerarRelatorioOnAction" style="-fx-background-color: #EDDECD;" text="Gerar relatório">
+               <HBox.margin>
+                  <Insets left="200.0" top="10.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+      <Separator layoutX="177.0" layoutY="149.0" orientation="VERTICAL" prefHeight="200.0" style="-fx-background-color: #863d3d;" />
+      <Separator layoutX="362.0" layoutY="150.0" orientation="VERTICAL" prefHeight="200.0" prefWidth="6.0" style="-fx-background-color: #863d3d;" />
+      <TextField fx:id="LivrosPopulares" layoutX="376.0" layoutY="158.0" prefHeight="185.0" prefWidth="215.0" />
+      <TextField fx:id="livro1TextField" layoutX="203.0" layoutY="301.0" prefHeight="26.0" prefWidth="131.0" />
+      <Label layoutX="55.0" layoutY="204.0" text="Emprestados:" textFill="#863d3d">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="55.0" layoutY="262.0" text="Atrasados:" textFill="#863d3d">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="57.0" layoutY="327.0" text="Reservados:" textFill="#863d3d">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="227.0" layoutY="204.0" text="Digite o título:" textFill="#863d3d">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="255.0" layoutY="262.0" text="ID" textFill="#863d3d">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="224.0" layoutY="327.0" text="Empréstimos" textFill="#863d3d">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
