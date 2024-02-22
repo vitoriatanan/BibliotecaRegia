@@ -50,8 +50,9 @@ public class LoginController implements Initializable {
 
     @FXML
     private void bttCancelarOnAction(ActionEvent event) {
-        Stage stage = (Stage) cancelarButton.getScene().getWindow();
-        stage.close();
+        if (event.getSource() == cancelarButton) {
+             Main.navegacaoEntreTelas("telaInicial");
+        }
     }
 
     /*
@@ -72,9 +73,11 @@ public class LoginController implements Initializable {
             AdministradorDAOImpl administradorDAO = new AdministradorDAOImpl();
             Administrador administrador = administradorDAO.read(id);
 
-            if (bibliotecario != null && bibliotecario.getSenhaAcesso().equals(senha) ||
-                    administrador != null && administrador.getSenhaAcesso().equals(senha)) {
-                Main.navegacaoEntreTelas("perfilBibliotecario");
+            if (bibliotecario != null && bibliotecario.getSenhaAcesso().equals(senha)){
+                Main.navegacaoEntreTelas("perfilBibliotecario");}
+
+            if (administrador != null && administrador.getSenhaAcesso().equals(senha)){
+                Main.navegacaoEntreTelas("perfilAdministrador");
 
             } else {
                 this.erroLabel.setText("ID ou senha incorretos");
