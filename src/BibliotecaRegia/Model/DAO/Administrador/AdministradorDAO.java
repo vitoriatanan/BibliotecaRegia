@@ -7,6 +7,7 @@ import BibliotecaRegia.Model.Entidade.Administrador;
 import java.io.IOException;
 import java.util.List;
 
+
 public interface AdministradorDAO {
     List<Administrador> create(Administrador administrador) throws IOException, ClassNotFoundException;
     Administrador read(String id) throws IOException, ClassNotFoundException;
