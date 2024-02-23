@@ -6,6 +6,7 @@ import BibliotecaRegia.Model.DAO.EmprestimoDevolucao.EmprestimoDevolucaoDAOImpl;
 import BibliotecaRegia.Model.DAO.Livro.LivroDAOImpl;
 import BibliotecaRegia.Model.Entidade.EmprestimoDevolucao;
 import BibliotecaRegia.Model.Entidade.Livro;
+import BibliotecaRegia.Model.Entidade.Reserva;
 import BibliotecaRegia.Model.Entidade.Usuario;
 
 import java.io.FileNotFoundException;
@@ -133,6 +134,9 @@ public class UsuarioDAOImpl implements UsuarioDAO {
         }
         return null;
     }
+
+
+
 
 
     /**
@@ -279,7 +283,7 @@ public class UsuarioDAOImpl implements UsuarioDAO {
         List<EmprestimoDevolucao> listaEmprestimos = new EmprestimoDevolucaoDAOImpl().readEmprestimosDoArquivo();
 
         for (EmprestimoDevolucao emprestimo : listaEmprestimos) {
-            if (emprestimo.getLivro().equals(livro.getTitulo())) {
+            if (emprestimo.getLivro().equals(livro)) {
                 livro.adicionarReserva(usuario);
 
                 Serializador.salvarDados("livro.dat", livro.getUsuariosReservados());
