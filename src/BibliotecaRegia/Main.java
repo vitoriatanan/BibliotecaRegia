@@ -12,13 +12,13 @@ import java.io.IOException;
 
 public class Main extends Application {
 
-    private static Scene  loginScene, perfilBibliotecarioScene, perfilAdministradorScene;
+    private static Scene  loginScene, perfilBibliotecarioScene, perfilAdministradorScene, telaInicialScene;
 
     private static Scene cadastrarUsuarioScene, alterarUsuariosScene, deletarUsuariosScene;
     private static Scene cadastrarOperadoresScene, alterarOperadoresScene, deletarOperadoresScene;
     private static Scene registrarEmprestimosScene, renovarEmprestimosScene, deletarEmprestimosScene;
-    private static Scene registrarLivrosScene, reservarLivrosScene;
-    private static Scene multasScene;
+    private static Scene registrarLivrosScene, reservarLivrosScene, deletarLivrosScene, alterarLivrosScene, devolucoesLivrosScene;
+    private static Scene multasScene, relatorioScene;
 
     private static Stage primaryStage;
 
@@ -26,6 +26,25 @@ public class Main extends Application {
     public void start(Stage stage) throws IOException {
 
         primaryStage = stage;
+
+        // Relatórios
+        Parent relatorio = FXMLLoader.load(getClass().getResource("/BibliotecaRegia/View/relatorio.fxml"));
+        relatorioScene = new Scene(relatorio);
+
+        //Devoluções Empréstimos
+        Parent devolucoesLivros = FXMLLoader.load(getClass().getResource("/BibliotecaRegia/View/devolucoesLivros.fxml"));
+        devolucoesLivrosScene =  new Scene(devolucoesLivros);
+        //alterar Livros
+        Parent alterarLivros = FXMLLoader.load(getClass().getResource("/BibliotecaRegia/View/alterarLivros.fxml"));
+        alterarLivrosScene = new Scene(alterarLivros);
+
+        //deletarLivros
+        Parent deletarLivros = FXMLLoader.load(getClass().getResource("/BibliotecaRegia/View/deletarLivros.fxml"));
+        deletarLivrosScene = new Scene(deletarLivros);
+
+        //TelaInicial
+        Parent telaInicial = FXMLLoader.load(getClass().getResource("/BibliotecaRegia/View/telaInicial.fxml"));
+        telaInicialScene = new Scene(telaInicial);
 
         //login
         Parent login = FXMLLoader.load(getClass().getResource("/BibliotecaRegia/View/login.fxml"));
@@ -54,8 +73,6 @@ public class Main extends Application {
         deletarUsuariosScene = new Scene(deletarUsuarios);
 
 
-
-        /* como é
         /*      ===== CONTROLE DE OPERADORES =====     */
         //cadastrar operadores
         Parent cadastrarOperadores = FXMLLoader.load(getClass().getResource("/BibliotecaRegia/View/cadastrarOperadores.fxml"));
@@ -98,49 +115,27 @@ public class Main extends Application {
         Parent multas = FXMLLoader.load(getClass().getResource("/BibliotecaRegia/View/multa.fxml"));
         multasScene = new Scene(multas);
 
-
-
-
-
-
-
-       /*
-
-       //opcção de cadastro (usuário/operador)
-       Parent opcaoCadastro = FXMLLoader.load(getClass().getResource("/BibliotecaRegia/View/opcaoCadastro.fxml"));
-       opcaoCadastroScene = new Scene(opcaoCadastro);
-
-       //cadastrar usuário
-        Parent cadastrarUsuario = FXMLLoader.load(getClass().getResource("/BibliotecaRegia/View/cadastrarUsuario.fxml"));
-        cadastrarUsuarioScene = new Scene(cadastrarUsuario);
-
-        //cadastrar operador
-        Parent cadastrarOperador = FXMLLoader.load(getClass().getResource("/BibliotecaRegia/View/cadastrarOperador.fxml"));
-        cadastrarOperadorScene = new Scene(cadastrarOperador);*/
-
-
         stage.initStyle(StageStyle.DECORATED);
-        stage.setScene(loginScene);
+        stage.setScene(telaInicialScene);
         stage.show();
-
-        /*
-        FXMLLoader janela1 = new FXMLLoader(getClass().getResource("/BibliotecaRegia/View/login.fxml"));
-
-
-        primaryStage = stage;
-        primaryStage.setTitle("Testezinho Maroto");
-        Parent parentJanela1 = janela1.load();
-
-        sceneJanela1 = new Scene(parentJanela1);
-
-        stage.setScene(sceneJanela1);
-        stage.show();
-        */
     }
 
 
     public static void navegacaoEntreTelas(String nomeTela) {
         switch (nomeTela) {
+
+            case ("alterarLivros"):
+                primaryStage.setScene(alterarLivrosScene);
+                break;
+
+            case ("deletarLivros"):
+                primaryStage.setScene(deletarLivrosScene);
+                break;
+
+            case("telaInicial"):
+                primaryStage.setScene(telaInicialScene);
+                break;
+
             case ("login"):
                 primaryStage.setScene(loginScene);
                 break;
@@ -168,6 +163,9 @@ public class Main extends Application {
             case ("deletarOperador"):
                 primaryStage.setScene(deletarOperadoresScene);
                 break;
+            case ("devolucoesLivros"):
+                primaryStage.setScene(devolucoesLivrosScene);
+                break;
             case ("registrarEmprestimo"):
                 primaryStage.setScene(registrarEmprestimosScene);
                 break;
@@ -186,6 +184,10 @@ public class Main extends Application {
             case ("multa"):
                 primaryStage.setScene(multasScene);
                 break;
+            case ("relatorio"):
+                primaryStage.setScene(relatorioScene);
+                break;
+
         }
     }
 
