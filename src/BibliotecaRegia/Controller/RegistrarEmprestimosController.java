@@ -126,7 +126,7 @@ public class RegistrarEmprestimosController implements Initializable {
     @FXML
     void botaoVoltarOnAction(ActionEvent event) {
         if (event.getSource() == botaoVoltar) {
-            Main.navegacaoEntreTelas("perfilAdministrador");
+            Main.navegacaoEntreTelas("login");
         }
     }
 
