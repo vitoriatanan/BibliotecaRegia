@@ -73,9 +73,9 @@ public class RegistrarLivrosController implements Initializable {
 
     @FXML
     void BttCancelar(ActionEvent event) {
-            if (event.getSource() == buttonCancelar){
-                Main.navegacaoEntreTelas("perfilAdministrador");
-            }
+        if (event.getSource() == buttonCancelar){
+            Main.navegacaoEntreTelas("login");
+        }
 
     }
 
@@ -84,7 +84,7 @@ public class RegistrarLivrosController implements Initializable {
     @FXML
     void bttVoltarOnAction(ActionEvent event) {
         if (event.getSource() == buttonVoltar){
-            Main.navegacaoEntreTelas("perfilAdministrador");
+            Main.navegacaoEntreTelas("login");
         }
 
     }
