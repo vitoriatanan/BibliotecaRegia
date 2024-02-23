@@ -91,7 +91,7 @@ public class DeletarLivrosController implements Initializable {
     @FXML
     void botaoCancelarOnAction(ActionEvent event) {
         if (event.getSource() == cancelarBotao){
-            Main.navegacaoEntreTelas("perfilAdministrador");
+            Main.navegacaoEntreTelas("login");
         }
 
     }
@@ -174,8 +174,6 @@ public class DeletarLivrosController implements Initializable {
         File deletarUsuarioFile = new File("resources/imagem/removerUsuario.png");
         Image deletarUsuario = new Image(deletarUsuarioFile.toURI().toString());
         deletarLivroImageView.setImage(deletarUsuario);
-
-
     }
 
 }
