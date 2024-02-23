@@ -6,12 +6,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Usuario extends Pessoa {
+    private static final long serialVersionUID = 9072900783305973555L;
     private String id;
     private String endereco;
     private String telefone;
     private List<EmprestimoDevolucao> emprestimos;
     private boolean contaBloqueada;
     private double multa;
+    private long diasAtraso;
 
     public Usuario(String nome, String endereco, String telefone) {
         super(nome);
@@ -20,6 +22,15 @@ public class Usuario extends Pessoa {
         this.emprestimos = new ArrayList<>();
         this.contaBloqueada = false;
         this.multa = 0;
+        this.diasAtraso = 0;
+    }
+
+    public long getDiasAtraso() {
+        return diasAtraso;
+    }
+
+    public void setDiasAtraso(long diasAtraso) {
+        this.diasAtraso = diasAtraso;
     }
 
     public String getId() {
@@ -69,5 +80,7 @@ public class Usuario extends Pessoa {
     public void setMulta(double multa) {
         this.multa = multa;
     }
+
+
 
 }
