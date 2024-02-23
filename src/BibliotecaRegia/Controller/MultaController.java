@@ -57,15 +57,15 @@ public class MultaController implements Initializable {
             encontrouUsuario.setText("Usuário Encontrado");
 
             //convertendo de long para String
-           long diasAtrasoLong = usuario.getDiasAtraso();
-           String diasAtraso = String.valueOf(diasAtrasoLong);
+            long diasAtrasoLong = usuario.getDiasAtraso();
+            String diasAtraso = String.valueOf(diasAtrasoLong);
 
-           //convertendo de double para String
-           double diasMultaDouble = usuario.getMulta();
-           String diasMulta = String.valueOf(diasMultaDouble);
+            //convertendo de double para String
+            double diasMultaDouble = usuario.getMulta();
+            String diasMulta = String.valueOf(diasMultaDouble);
 
-           atrasoTextField.setText(diasAtraso);
-           multaTextField.setText(diasMulta);
+            atrasoTextField.setText(diasAtraso);
+            multaTextField.setText(diasMulta);
         } else {
             encontrouUsuario.setText("Usuário não encontrado");
         }
