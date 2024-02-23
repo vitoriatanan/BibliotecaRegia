@@ -7,18 +7,20 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Livro implements Serializable {
+    private static final long serialVersionUID = 9072900783305973555L;
+
     private String titulo;
     private String autor;
     private String editora;
     private String isbn;
-    private Integer anoPublicacao;
+    private String anoPublicacao;
     private String categoria;
     private boolean livroDisponivel;
-    private List<Usuario> usuariosReservados;
+    private List<Usuario> usuariosReservados; //lista de reserva de livros
 
 
     // Construtor
-    public Livro(String titulo, String autor, String editora, String isbn, Integer anoPublicacao, String categoria) {
+    public Livro(String titulo, String autor, String editora, String isbn, String anoPublicacao, String categoria) {
         this.titulo = titulo;
         this.autor = autor;
         this.editora = editora;
@@ -70,11 +72,12 @@ public class Livro implements Serializable {
         this.isbn = isbn;
     }
 
-    public Integer getAnoPublicacao() {
+
+    public String getAnoPublicacao() {
         return anoPublicacao;
     }
 
-    public void setAnoPublicacao(Integer anoPublicacao) {
+    public void setAnoPublicacao(String anoPublicacao) {
         this.anoPublicacao = anoPublicacao;
     }
 
