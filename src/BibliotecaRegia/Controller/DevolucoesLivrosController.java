@@ -117,7 +117,7 @@ public class DevolucoesLivrosController implements Initializable {
 
     @FXML
     void BttVoltarOnAction(ActionEvent event) {
-        Main.navegacaoEntreTelas("perfilAdministrador");
+        Main.navegacaoEntreTelas("login");
 
     }
 
