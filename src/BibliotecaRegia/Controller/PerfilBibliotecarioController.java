@@ -16,6 +16,12 @@ import javafx.scene.control.MenuButton;
 public class PerfilBibliotecarioController implements Initializable {
 
     @FXML
+    private ResourceBundle resources;
+
+    @FXML
+    private URL location;
+
+    @FXML
     private MenuItem alterarLivros;
 
     @FXML
@@ -56,49 +62,51 @@ public class PerfilBibliotecarioController implements Initializable {
 
     @FXML
     void CadastrarLivrosOnAction(ActionEvent event) {
-        Main.navegacaoEntreTelas("cadastrarLivros");
-
+        if (event.getSource() == cadastrarLivros ) {
+            Main.navegacaoEntreTelas("registrarLivro");
+        }
     }
+
 
     @FXML
     void alterarLivrosOnAction(ActionEvent event) {
-        Main.navegacaoEntreTelas("alterarLivros");
-
+        if (event.getSource() == alterarLivros) {
+            Main.navegacaoEntreTelas("alterarLivros");
+        }
     }
+
     @FXML
     void deletarLivrosOnAction(ActionEvent event) {
-        Main.navegacaoEntreTelas("deletarLivros");
-
+        if (event.getSource() == deletarLivros) {
+            Main.navegacaoEntreTelas("deletarLivros");
+        }
     }
 
     @FXML
     void devolucaoOnAction(ActionEvent event) {
-        Main.navegacaoEntreTelas("devolucoesLivros");
-
+        if (event.getSource() == devolucao) {
+            Main.navegacaoEntreTelas("devolucoesLivros");
+        }
     }
-
     @FXML
     void emprestimoOnAction(ActionEvent event) {
-        Main.navegacaoEntreTelas("registrarEmprestimos");
-
+        if (event.getSource() == emprestimos) {
+            Main.navegacaoEntreTelas("registrarEmprestimo");
+        }
     }
 
     @FXML
     void pesquisarOnAction(ActionEvent event) {
-        Main.navegacaoEntreTelas("telaInicial");
-
+        if (event.getSource() == pesquisarLivros) {
+            Main.navegacaoEntreTelas("telaInicial");
+        }
     }
-
-
-
 
     @FXML
     void bttSair(ActionEvent event) {
         if (event.getSource() == botaoSair) {
             Main.navegacaoEntreTelas("login");
-
         }
-
     }
 
     @Override
