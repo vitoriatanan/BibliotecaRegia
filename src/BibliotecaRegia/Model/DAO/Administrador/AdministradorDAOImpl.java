@@ -233,6 +233,7 @@ public class AdministradorDAOImpl implements AdministradorDAO {
         return usuarioDAO.realizarReserva(livro, usuario);
     }
 
+    
     /**
      * Permite ao administrador acessar as renovações de empréstimos
      *
