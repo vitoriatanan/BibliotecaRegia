@@ -101,26 +101,26 @@ public class AlterarLivrosController implements Initializable {
 
     @FXML
     void BttPesquisarOnAction(ActionEvent event) throws IOException, ClassNotFoundException {
-            String pesquisa = pesquisarTextField.getText();
+        String pesquisa = pesquisarTextField.getText();
 
-            LivroDAOImpl livroDAO = new LivroDAOImpl();
-            Livro livro = livroDAO.read(pesquisa);
+        LivroDAOImpl livroDAO = new LivroDAOImpl();
+        Livro livro = livroDAO.read(pesquisa);
 
-            if (livro != null) {
-                labelMensagem.setText("Livro Encontrado!");
+        if (livro != null) {
+            labelMensagem.setText("Livro Encontrado!");
 
-                resultadoTitulo.setText(livro.getTitulo());
-                resultadoISBN.setText(livro.getIsbn());
-                resultadoEditora.setText(livro.getEditora());
-                resultadoCategoria.setText(livro.getCategoria());
-                resultadoAno.setText(livro.getAnoPublicacao());
-                resultadoAutor.setText(livro.getAutor());
+            resultadoTitulo.setText(livro.getTitulo());
+            resultadoISBN.setText(livro.getIsbn());
+            resultadoEditora.setText(livro.getEditora());
+            resultadoCategoria.setText(livro.getCategoria());
+            resultadoAno.setText(livro.getAnoPublicacao());
+            resultadoAutor.setText(livro.getAutor());
 
-            } else {
-                labelMensagem.setText("Livro não Encontrado!");
-                limparResultados();
+        } else {
+            labelMensagem.setText("Livro não Encontrado!");
+            limparResultados();
 
-            }
+        }
 
     }
 
@@ -202,7 +202,7 @@ public class AlterarLivrosController implements Initializable {
     @FXML
     void BttCancelarOnAction(ActionEvent event) {
         if (event.getSource() == cancelarAlterar);
-        Main.navegacaoEntreTelas("perfilAdministrador");
+        Main.navegacaoEntreTelas("login");
 
     }
     @Override
