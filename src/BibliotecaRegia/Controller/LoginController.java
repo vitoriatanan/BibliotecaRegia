@@ -55,11 +55,11 @@ public class LoginController implements Initializable {
     }
 
     /*
-    * Valida a entrada de dados nas caixas de texto.
-    * Faz a busca do id e senha do operador, se estiver
-    * correto, troca de tela, caso contrário exibe uma
-    * mensagem de erro.
-    * */
+     * Valida a entrada de dados nas caixas de texto.
+     * Faz a busca do id e senha do operador, se estiver
+     * correto, troca de tela, caso contrário exibe uma
+     * mensagem de erro.
+     * */
     @FXML
     void bttEntrarOnAction(ActionEvent event) throws IOException, ClassNotFoundException {
         if (event.getSource() == entrarButton) {
