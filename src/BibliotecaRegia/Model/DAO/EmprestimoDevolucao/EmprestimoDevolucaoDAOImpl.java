@@ -18,38 +18,46 @@ public class EmprestimoDevolucaoDAOImpl implements EmprestimoDevolucaoDAO {
 
     /**
      * Responsável por adicionar um novo empréstimo ao sistema.
-     *
+     * <p>
      * Adiciona o empréstimo à lista de empréstimos e salva a
      * lista atualizada de empréstimos no arquivo "empréstimoDevolucao.dat".
      *
-     * @param emprestimo    empréstimo a ser adicionado
-     * @return              lista de empréstimos
-     * */
+     * @param emprestimo empréstimo a ser adicionado
+     * @return lista de empréstimos
+     */
     @Override
     public List<EmprestimoDevolucao> create(EmprestimoDevolucao emprestimo) throws IOException, ClassNotFoundException {
+        // Carrega a lista de empréstimos do arquivo
         List<EmprestimoDevolucao> listaEmprestimos = readEmprestimosDoArquivo();
 
-        for (EmprestimoDevolucao emprestimos : listaEmprestimos) {
-            if (emprestimos.getLivro().getTitulo().equals(emprestimos.getLivro().getTitulo())) {
-                return null;
+        // Verifica se já existe um empréstimo para o mesmo livro e usuário
+        for (EmprestimoDevolucao emprestimoExistente : listaEmprestimos) {
+            if (emprestimoExistente.getLivro().getTitulo().equals(emprestimo.getLivro().getTitulo())
+                    && emprestimoExistente.getUsuario().getId().equals(emprestimo.getUsuario().getId())) {
+                return null; // Já existe um empréstimo para o mesmo livro e usuário
             }
         }
 
+        // Adiciona o novo empréstimo à lista
         listaEmprestimos.add(emprestimo);
-        Serializador.salvarDados("emprestimos.dat", listaEmprestimos);
+
+        // Salva a lista atualizada no arquivo
+        salvarEmprestimosNoArquivo(listaEmprestimos);
 
         return listaEmprestimos;
     }
+    private void salvarEmprestimosNoArquivo(List<EmprestimoDevolucao> emprestimos) throws IOException {
+        Serializador.salvarDados("emprestimoDevolucao.dat", emprestimos);
+    }
 
     /**
-     *
      * Lê a lista de empréstimos do arquivo "emprestimoDevolucao.dat", itera
      * sobre ela procurando por um empréstimo específico e salva a lista
      * atualizada no arquivo.
      *
-     * @param titulo     Título do livro
-     * @return           Empréstimo se encontrado, caso contrário, retorna nulo
-     * */
+     * @param titulo Título do livro
+     * @return Empréstimo se encontrado, caso contrário, retorna nulo
+     */
     @Override
     public EmprestimoDevolucao read(String titulo) throws IOException, ClassNotFoundException {
 
@@ -65,21 +73,27 @@ public class EmprestimoDevolucaoDAOImpl implements EmprestimoDevolucaoDAO {
 
     /**
      * Responsável por atualizar as informações de um empréstimo específico.
-     *
+     * <p>
      * Lê a lista de empréstimos do arquivo, verifica se a lista contém o
      * empréstimo a ser atualizado, substitui pelo novo empréstimo e salva a
      * lista atualizada no arquivo "emprestimoDevolucao.dat".
      *
-     * @param emprestimoAtual       empréstimo realizado recente
-     * @param novoEmprestimo        emprestimo a ser atualizadp
-     * */
+     * @param emprestimoAtual empréstimo realizado recente
+     * @param novoEmprestimo  emprestimo a ser atualizadp
+     */
     @Override
     public void update(EmprestimoDevolucao emprestimoAtual, EmprestimoDevolucao novoEmprestimo) throws IOException, ClassNotFoundException {
-
         /* Faz a leitura do arquivo "emprestimoDevolucao.dat" */
-        ArrayList<EmprestimoDevolucao> listaEmprestimos = new ArrayList<EmprestimoDevolucao>();
-        listaEmprestimos = (ArrayList<EmprestimoDevolucao>) Serializador.leituraDados("emprestimo.dat");
+        ArrayList<EmprestimoDevolucao> listaEmprestimos;
 
+        try {
+            listaEmprestimos = (ArrayList<EmprestimoDevolucao>) Serializador.leituraDados("emprestimoDevolucao.dat");
+        } catch (FileNotFoundException e) {
+            // Se o arquivo não existir, cria uma nova lista vazia
+            listaEmprestimos = new ArrayList<>();
+        }
+
+        // Atualiza a lista com o novo empréstimo
         for (int i = 0; i < listaEmprestimos.size(); i++) {
             if (listaEmprestimos.get(i).equals(emprestimoAtual)) {
                 listaEmprestimos.set(i, novoEmprestimo);
@@ -87,20 +101,20 @@ public class EmprestimoDevolucaoDAOImpl implements EmprestimoDevolucaoDAO {
             }
         }
 
-        emprestimos = listaEmprestimos;
-        Serializador.salvarDados("emprestimo.dat", listaEmprestimos);
+        // Salva a lista atualizada no arquivo "emprestimoDevolucao.dat"
+        Serializador.salvarDados("emprestimoDevolucao.dat", listaEmprestimos);
     }
 
     /**
      * Responsável por remover um empréstimo específico.
-     *
+     * <p>
      * Lê a lista de empréstimos do arquivo "emprestimoDevolucao.dat", itera sobre
      * uma cópia da lista de empréstimos, verifica se cada empréstimo na cópia
      * possui as mesmas características do empréstimo a ser removido, remove esse
      * empréstimo da lista e salva a lista atualizada no arquivo.
      *
-     * @param emprestimo     empréstimo a ser removido
-     * */
+     * @param emprestimo empréstimo a ser removido
+     */
     @Override
     public void delete(EmprestimoDevolucao emprestimo) throws IOException, ClassNotFoundException {
         emprestimos.remove(emprestimo);
@@ -121,7 +135,7 @@ public class EmprestimoDevolucaoDAOImpl implements EmprestimoDevolucaoDAO {
         }
     }
 
-    public void salvarDevolucoes(List<EmprestimoDevolucao> devolucoes) throws  IOException {
-        Serializador.salvarDados("devolucao.dat", devolucoes);
+    public void salvarDevolucoes(List<EmprestimoDevolucao> devolucoes) throws IOException {
+        Serializador.salvarDados("emprestimos.dat", devolucoes);
     }
 }
