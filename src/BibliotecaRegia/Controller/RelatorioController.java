@@ -104,9 +104,9 @@ public class RelatorioController implements Initializable {
         LivroDAOImpl livroDAO = new LivroDAOImpl();
         String id = idTextField.getText();
         String titulo = tituloTextField.getText();
-       Usuario usuario = usuarioDAO.read(id);
-       EmprestimoDevolucaoDAOImpl EmprestimoDevolucaoDAO = new EmprestimoDevolucaoDAOImpl();
-       EmprestimoDevolucao emprestimoDevolucao = EmprestimoDevolucaoDAO.read(titulo);
+        Usuario usuario = usuarioDAO.read(id);
+        EmprestimoDevolucaoDAOImpl EmprestimoDevolucaoDAO = new EmprestimoDevolucaoDAOImpl();
+        EmprestimoDevolucao emprestimoDevolucao = EmprestimoDevolucaoDAO.read(titulo);
 
 
 
@@ -128,14 +128,14 @@ public class RelatorioController implements Initializable {
 
 
 
-    // Verifique se o usuário não é nulo antes de prosseguir
+        // Verifique se o usuário não é nulo antes de prosseguir
         atrasadosTextField.setText(String.valueOf(atrasados));
         emprestadosTextField.setText(String.valueOf(emprestados));
         reservadosTextField.setText(String.valueOf(reservados));
         LivrosPopulares.setText(livro);
         livro1TextField.setText(String.valueOf(emprestimosID));
 
-        }
+    }
 
     @FXML
     public void VoltarOnAction(ActionEvent event){
@@ -143,19 +143,19 @@ public class RelatorioController implements Initializable {
     }
 
 
-        @Override
-        public void initialize (URL url, ResourceBundle resourceBundle){
-            //carregamento logo
-            File logoFile = new File("resources/imagem/logo.png");
-            Image marcaImage = new Image(logoFile.toURI().toString());
-            logo.setImage(marcaImage);
+    @Override
+    public void initialize (URL url, ResourceBundle resourceBundle){
+        //carregamento logo
+        File logoFile = new File("resources/imagem/logo.png");
+        Image marcaImage = new Image(logoFile.toURI().toString());
+        logo.setImage(marcaImage);
 
-            //carregamento voltar
-            File voltarFile = new File("resources/imagem/voltar.png");
-            Image iconeVoltar = new Image(voltarFile.toURI().toString());
-            voltarImagem.setImage(iconeVoltar);
+        //carregamento voltar
+        File voltarFile = new File("resources/imagem/voltar.png");
+        Image iconeVoltar = new Image(voltarFile.toURI().toString());
+        voltarImagem.setImage(iconeVoltar);
 
 
-        }
     }
+}
 
