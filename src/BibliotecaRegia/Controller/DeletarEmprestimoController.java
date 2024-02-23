@@ -161,5 +161,4 @@ public class DeletarEmprestimoController implements Initializable {
         Image pesquisa = new Image(lupaFile.toURI().toString());
         pesquisarImageView.setImage(pesquisa);
     }
-
 }
