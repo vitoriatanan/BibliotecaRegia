@@ -1,7 +1,5 @@
 package BibliotecaRegia.Model.Entidade;
 
-
-
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -27,6 +25,9 @@ public class EmprestimoDevolucao implements Serializable {
         this.listaDevolucoes = new ArrayList<>();
     }
 
+    public void setRenovacoes(int renovacoes) {
+        this.renovacoes = renovacoes;
+    }
 
     public LocalDate getDataEmprestimo() {
         return dataEmprestimo;
