@@ -76,7 +76,7 @@ public class GerenciarUsuariosController implements Initializable {
 
     @FXML
     void botaoAtualizarOnAction(ActionEvent event) {
-        
+
     }
 
 
