@@ -200,5 +200,4 @@ public class AlterarOperadoresController implements Initializable {
         Image iconeImage = new Image(iconeFile.toURI().toString());
         pesquisarImageView.setImage(iconeImage);
     }
-
 }
