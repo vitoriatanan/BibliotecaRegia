@@ -27,8 +27,8 @@ public class EmprestimoDevolucaoDAOImplTest {
         usuarioTeste = new Usuario("Lara Levy", "Rua A", "87877");
         usuarioTeste2 = new Usuario("Edward House", "Rua B", "87569");
 
-        livroTeste = new Livro("Livro 1", "Autor 1", "Editora 1", "Isbn 1", 2023, "Categoria 1");
-        livroTeste2 = new Livro("Livro 2", "Autor 2", "Editora 2", "Isbn 2", 2023, "Categoria 2");
+        livroTeste = new Livro("Livro 1", "Autor 1", "Editora 1", "Isbn 1", "2023", "Categoria 1");
+        livroTeste2 = new Livro("Livro 2", "Autor 2", "Editora 2", "Isbn 2", "2023", "Categoria 2");
 
 
         emprestimoDevolucaoDAO = new EmprestimoDevolucaoDAOImpl();
