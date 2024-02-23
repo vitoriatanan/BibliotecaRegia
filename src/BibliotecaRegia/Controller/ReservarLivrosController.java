@@ -90,7 +90,7 @@ public class ReservarLivrosController implements Initializable {
 
             if (usuario != null) {
                 Reserva reserva = new Reserva(livro, usuario);
-                boolean reservaFeita = usuarioDAO.realizarReserva(reserva);
+                boolean reservaFeita = usuarioDAO.realizarReserva(livro, usuario);
 
                 if (reservaFeita) {
                     tituloTextReserva.setText(livro.getTitulo());
