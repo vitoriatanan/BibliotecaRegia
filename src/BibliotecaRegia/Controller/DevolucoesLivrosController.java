@@ -46,27 +46,14 @@ public class DevolucoesLivrosController implements Initializable {
     @FXML
     private TextField LivroTextField;
 
-    @FXML
-    private Button buttonAdicionar;
-
-    @FXML
-    private Button buttonAtualizar;
-
-    @FXML
-    private Button buttonDeletar;
-
-    @FXML
-    private Button buttonVoltar;
-
+   @FXML
+   private Button botaoVoltar;
     @FXML
     private Label labelMensagem;
 
-    @FXML
-    private ImageView voltar;
 
     @FXML
     private ImageView logo;
-
 
 
     @FXML
@@ -117,8 +104,9 @@ public class DevolucoesLivrosController implements Initializable {
 
     @FXML
     void BttVoltarOnAction(ActionEvent event) {
-        Main.navegacaoEntreTelas("login");
-
+        if (event.getSource() == botaoVoltar) {
+            Main.navegacaoEntreTelas("login");
+        }
     }
 
 
@@ -128,13 +116,6 @@ public class DevolucoesLivrosController implements Initializable {
         File logoFile = new File("resources/imagem/logo.png");
         Image logoImage = new Image(logoFile.toURI().toString());
         logo.setImage(logoImage);
-
-        //Icone de Voltar
-        File voltarFile = new File("resources/imagem/voltar.png");
-        Image iconeVoltar = new Image(voltarFile.toURI().toString());
-        voltar.setImage(iconeVoltar);
-
-
 
     }
 
