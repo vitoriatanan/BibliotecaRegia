@@ -11,29 +11,17 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #F5FFFA;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BibliotecaRegia.Controller.RegistrarLivrosController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #F5FFFA;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BibliotecaRegia.Controller.RegistrarLivrosController">
    <bottom>
       <HBox prefHeight="12.0" prefWidth="600.0" style="-fx-background-color: #EDDECD;" BorderPane.alignment="CENTER">
          <children>
             <Label fx:id="labelMensagem" textFill="RED" />
-            <Button fx:id="buttonVoltar" mnemonicParsing="false" onAction="#bttVoltarOnAction" prefHeight="23.0" prefWidth="46.0">
-               <graphic>
-                  <ImageView fx:id="ImagemVoltar" fitHeight="29.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../resources/imagem/voltar.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-               <HBox.margin>
-                  <Insets top="10.0" />
-               </HBox.margin>
-            </Button>
-            <Button fx:id="bouttonAdicionar" mnemonicParsing="false" onAction="#BttAdicionar" style="-fx-background-color: #863d3d;" text="Adicionar" textFill="WHITE">
+            <Button fx:id="bouttonAdicionar" mnemonicParsing="false" onAction="#BttAdicionar" prefHeight="26.0" prefWidth="87.0" style="-fx-background-color: #863d3d; -fx-border-color: #000000;" text="Adicionar" textFill="WHITE">
                <HBox.margin>
                   <Insets bottom="10.0" left="160.0" right="20.0" top="30.0" />
                </HBox.margin>
             </Button>
-            <Button fx:id="buttonCancelar" mnemonicParsing="false" onAction="#BttCancelar" style="-fx-background-color: #863d3d;" text="Cancelar" textFill="WHITE">
+            <Button fx:id="buttonCancelar" mnemonicParsing="false" onAction="#BttCancelar" prefHeight="26.0" prefWidth="94.0" style="-fx-background-color: #863d3d; -fx-border-color: #000000;" text="Voltar" textFill="WHITE">
                <HBox.margin>
                   <Insets top="30.0" />
                </HBox.margin>
@@ -66,12 +54,12 @@
    <left>
       <VBox prefHeight="166.0" prefWidth="304.0" style="-fx-background-color: #F5FFFA;" BorderPane.alignment="CENTER">
          <children>
-            <TextField fx:id="tituloTextField" promptText="Título..." style="-fx-background-color: #EDDEC;" />
-            <TextField fx:id="ISBNtexteField" promptText="ISBN..." />
-            <TextField fx:id="EditoraTextField" promptText="Editora..." />
-            <TextField fx:id="categoriaTextFiel" promptText="Categoria..." />
-            <TextField fx:id="anoTextField" promptText="Ano de publicação..." />
-            <TextField fx:id="AutorTextField" promptText="Autor..." style="-fx-background-color: #EDDEC;">
+            <TextField fx:id="tituloTextField" promptText="Título..." style="-fx-background-color: transparent; -fx-border-color: #000000; -fx-border-width: 0px 0px 1px 0px;" />
+            <TextField fx:id="ISBNtexteField" promptText="ISBN..." style="-fx-background-color: transparent; -fx-border-color: #000000; -fx-border-width: 0px 0px 1px 0px;" />
+            <TextField fx:id="EditoraTextField" promptText="Editora..." style="-fx-background-color: transparent; -fx-border-color: #000000; -fx-border-width: 0px 0px 1px 0px;" />
+            <TextField fx:id="categoriaTextFiel" promptText="Categoria..." style="-fx-background-color: transparent; -fx-border-color: #000000; -fx-border-width: 0px 0px 1px 0px;" />
+            <TextField fx:id="anoTextField" promptText="Ano de publicação..." style="-fx-background-color: transparent; -fx-border-color: #000000; -fx-border-width: 0px 0px 1px 0px;" />
+            <TextField fx:id="AutorTextField" promptText="Autor..." style="-fx-background-color: transparent; -fx-border-color: #000000; -fx-border-width: 0px 0px 1px 0px;">
                <VBox.margin>
                   <Insets bottom="5.0" />
                </VBox.margin>
