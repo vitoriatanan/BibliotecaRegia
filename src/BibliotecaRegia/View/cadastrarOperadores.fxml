@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BibliotecaRegia.Controller.CadastrarOperadoresController">
+   <children>
+      <Label layoutX="23.0" layoutY="111.0" text="Operador">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nomeTextField" layoutX="23.0" layoutY="151.0" prefHeight="26.0" prefWidth="298.0" promptText="Nome" style="-fx-background-color: transparent; -fx-border-color: #000000; -fx-border-width: 0px 0px 1px 0px;" />
+      <TextField fx:id="senhaTextField" layoutX="23.0" layoutY="251.0" prefHeight="26.0" prefWidth="298.0" promptText="Senha" style="-fx-background-color: transparent; -fx-border-color: #000000; -fx-border-width: 0px 0px 1px 0px;" />
+      <Pane prefHeight="78.0" prefWidth="600.0" style="-fx-background-color: #EDDECD;">
+         <children>
+            <ImageView fx:id="logoImageView" fitHeight="86.0" fitWidth="78.0" layoutX="8.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../resources/imagem/logo.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="103.0" layoutY="24.0" text="BIBLIOTECA RÉGIA" textFill="#863d3d">
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutY="321.0" prefHeight="78.0" prefWidth="600.0" style="-fx-background-color: #EDDECD;">
+         <children>
+            <ButtonBar layoutX="142.0" layoutY="19.0" prefHeight="40.0" prefWidth="317.0">
+               <buttons>
+                  <Button fx:id="botaoCadastrar" mnemonicParsing="false" onAction="#botaoCadastrarOnAction" prefHeight="27.0" prefWidth="153.0" style="-fx-background-color: #863d3d; -fx-border-color: #000000;" text="Cadastrar" textFill="WHITE" />
+                  <Button fx:id="botaoCancelar" mnemonicParsing="false" onAction="#botaoCancelarOnAction" prefHeight="27.0" prefWidth="153.0" style="-fx-background-color: #863d3d; -fx-border-color: #000000;" text="Cancelar" textFill="WHITE" />
+               </buttons>
+            </ButtonBar>
+         </children>
+      </Pane>
+      <Label fx:id="labelMensagem" layoutX="68.0" layoutY="292.0" textFill="#df0c0c">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="278.0" layoutY="223.0" text="ID">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="operadorImageView" fitHeight="164.0" fitWidth="177.0" layoutX="385.0" layoutY="125.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../resources/imagem/operador.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="exibicaoID" layoutX="296.0" layoutY="223.0" text="ID">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="cargoChoiceBox" layoutX="23.0" layoutY="215.0" prefHeight="26.0" prefWidth="224.0" style="-fx-background-color: transparent; -fx-border-color: #000000; -fx-border-width: 0px 0px 1px 0px;" />
+      <Label layoutX="31.0" layoutY="200.0" text="Cargo" />
+      <ImageView fx:id="adicaoImageView" fitHeight="136.0" fitWidth="128.0" layoutX="472.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../resources/imagem/maisPequeno.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
