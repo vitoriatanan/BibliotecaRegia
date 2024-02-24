@@ -15,7 +15,7 @@ public class Serializador {
         oos.writeObject(lista);
         oos.close();
     }
-    
+
     public static Object leituraDados(String nomeArquivo) throws FileNotFoundException, IOException, ClassNotFoundException, InvalidClassException {
         FileInputStream fis = new FileInputStream(nomeArquivo);
         ObjectInputStream ois = new ObjectInputStream(fis);
