@@ -80,16 +80,6 @@ public class RegistrarLivrosController implements Initializable {
     }
 
 
-
-    @FXML
-    void bttVoltarOnAction(ActionEvent event) {
-        if (event.getSource() == buttonVoltar){
-            Main.navegacaoEntreTelas("login");
-        }
-
-    }
-
-
     @FXML
     void BttAdicionar(ActionEvent event) throws IOException, ClassNotFoundException {
 
@@ -146,12 +136,6 @@ public class RegistrarLivrosController implements Initializable {
         File fileLivros = new File("resources/imagem/registrarLivros.png");
         Image iconeLivros = new Image(fileLivros.toURI().toString());
         ImagemLivros.setImage(iconeLivros);
-        //Icone de Voltar
-        File voltarFile = new File("resources/imagem/voltar.png");
-        Image iconeVoltar = new Image(voltarFile.toURI().toString());
-        ImagemVoltar.setImage(iconeVoltar);
-
-
     }
 }
 
