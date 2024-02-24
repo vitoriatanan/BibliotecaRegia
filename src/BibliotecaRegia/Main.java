@@ -34,6 +34,7 @@ public class Main extends Application {
         //Devoluções Empréstimos
         Parent devolucoesLivros = FXMLLoader.load(getClass().getResource("/BibliotecaRegia/View/devolucoesLivros.fxml"));
         devolucoesLivrosScene =  new Scene(devolucoesLivros);
+
         //alterar Livros
         Parent alterarLivros = FXMLLoader.load(getClass().getResource("/BibliotecaRegia/View/alterarLivros.fxml"));
         alterarLivrosScene = new Scene(alterarLivros);
