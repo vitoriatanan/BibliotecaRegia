@@ -58,7 +58,10 @@ public class PerfilBibliotecarioController implements Initializable {
     private Button pesquisarLivros;
 
     @FXML
-    private ImageView sairImageView;
+    private ImageView sairImageView, leitorWhite, devolucaoWhite;
+
+    @FXML
+    private MenuItem registrarEmprestimoMenuItem, renovarEmprestimoMenuItem, deletarEmprestimoMenuItem;
 
     @FXML
     void CadastrarLivrosOnAction(ActionEvent event) {
@@ -88,10 +91,25 @@ public class PerfilBibliotecarioController implements Initializable {
             Main.navegacaoEntreTelas("devolucoesLivros");
         }
     }
+
     @FXML
-    void emprestimoOnAction(ActionEvent event) {
-        if (event.getSource() == emprestimos) {
+    void menuDeletarEmprestimoOnAction(ActionEvent event) {
+        if (event.getSource() == deletarEmprestimoMenuItem) {
+            Main.navegacaoEntreTelas("deletarEmprestimo");
+        }
+    }
+
+    @FXML
+    void menuRegistrarEmprestimoOnAction(ActionEvent event) {
+        if (event.getSource() == registrarEmprestimoMenuItem) {
             Main.navegacaoEntreTelas("registrarEmprestimo");
+        }
+    }
+
+    @FXML
+    void menuRenovarEmprestimoOnAction(ActionEvent event) {
+        if (event.getSource() == renovarEmprestimoMenuItem) {
+            Main.navegacaoEntreTelas("login");
         }
     }
 
@@ -117,7 +135,7 @@ public class PerfilBibliotecarioController implements Initializable {
         credencialImageView.setImage(credencialImage);
 
         //carregamento ícone perfil
-        File iconePerfilFile = new File("resources/imagem/usuarioPerfil.png");
+        File iconePerfilFile = new File("resources/imagem/perfil.png");
         Image iconePerfilImage = new Image(iconePerfilFile.toURI().toString());
         perfilImageView.setImage(iconePerfilImage);
 
@@ -135,6 +153,18 @@ public class PerfilBibliotecarioController implements Initializable {
         File iconeSairFile = new File("resources/imagem/sair.png");
         Image iconeSairImage = new Image(iconeSairFile.toURI().toString());
         sairImageView.setImage(iconeSairImage);
+
+        //carregamento icone emprestimo
+
+        //carregamento icone devolução
+        File devolucaoFile = new File("resources/imagem/devolucaoWhite.png");
+        Image devolucaoImage = new Image(devolucaoFile.toURI().toString());
+        devolucaoWhite.setImage(devolucaoImage);
+
+        //carregamento icone leitor
+        File leitorFile = new File("resources/imagem/leitorWhite.png");
+        Image leitorImage = new Image(leitorFile.toURI().toString());
+        leitorWhite.setImage(leitorImage);
 
     }
 
