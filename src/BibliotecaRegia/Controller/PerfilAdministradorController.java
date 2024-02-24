@@ -79,9 +79,6 @@ public class PerfilAdministradorController implements Initializable {
     private ImageView livroWhite;
 
     @FXML
-    private MenuButton menuItemOperador;
-
-    @FXML
     private ImageView multaWhite;
 
     @FXML
@@ -103,7 +100,7 @@ public class PerfilAdministradorController implements Initializable {
     private ImageView reservaWhite;
 
     @FXML
-    private ImageView sairImageView;
+    private ImageView sairImageView, devolucaoWhite;
 
     @FXML
     private Button relatorio;
@@ -305,5 +302,10 @@ public class PerfilAdministradorController implements Initializable {
         File operadorFile = new File("resources/imagem/operadorWhite.png");
         Image operadorImage = new Image(operadorFile.toURI().toString());
         gerenciarOperadorWhite.setImage(operadorImage);
+
+        //carregamento icone devolução
+        File devolucaoFile = new File("resources/imagem/devolucaoWhite.png");
+        Image devolucaoImage = new Image(devolucaoFile.toURI().toString());
+        devolucaoWhite.setImage(devolucaoImage);
     }
 }
