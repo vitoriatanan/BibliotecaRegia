@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="430.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BibliotecaRegia.Controller.ReservarLivrosController">
+   <children>
+      <Label layoutX="231.0" layoutY="86.0" text="Reserva de Livros">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <TextField fx:id="pesquisarTextField" layoutX="222.0" layoutY="131.0" prefHeight="26.0" prefWidth="174.0" promptText="Título" style="-fx-background-color: transparent; -fx-border-color: #000000; -fx-border-width: 0px 0px 1px 0px;" />
+      <Pane prefHeight="78.0" prefWidth="600.0" style="-fx-background-color: #EDDECD;">
+         <children>
+            <ImageView fx:id="logoImageView" fitHeight="86.0" fitWidth="78.0" layoutX="8.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../resources/imagem/logo.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="103.0" layoutY="24.0" text="BIBLIOTECA RÉGIA" textFill="#863d3d">
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutY="351.0" prefHeight="78.0" prefWidth="600.0" style="-fx-background-color: #EDDECD;">
+         <children>
+            <ButtonBar layoutX="142.0" layoutY="19.0" prefHeight="40.0" prefWidth="317.0">
+               <buttons>
+                  <Button fx:id="botaoReservar" mnemonicParsing="false" onAction="#botaoReservarOnAction" prefHeight="27.0" prefWidth="153.0" style="-fx-background-color: #863d3d; -fx-border-color: #000000;" text="Reservar" textFill="WHITE" />
+                  <Button fx:id="botaoVoltar" mnemonicParsing="false" onAction="#botaoVoltarOnAction" prefHeight="27.0" prefWidth="153.0" style="-fx-background-color: #863d3d; -fx-border-color: #000000;" text="Voltar" textFill="WHITE" />
+               </buttons>
+            </ButtonBar>
+         </children>
+      </Pane>
+      <Label fx:id="labelMensagem" layoutX="206.0" layoutY="323.0" textFill="#df0c0c">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Button fx:id="botaoPesquisar" layoutX="399.0" layoutY="124.0" mnemonicParsing="false" onAction="#botaoPesquisarOnAction" style="-fx-background-color: #863d3d; -fx-border-color: #000000;">
+         <graphic>
+            <ImageView fx:id="pesquisaImageView" fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../resources/imagem/pesquisarWhite.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <GridPane layoutX="51.0" layoutY="255.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.20001220703125" minWidth="10.0" prefWidth="37.5999755859375" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="162.4000244140625" minWidth="10.0" prefWidth="162.4000244140625" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TextField fx:id="idTextEmprestimo" GridPane.columnIndex="1" />
+            <TextField fx:id="tituloTextEmprestimo" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label text="ID" />
+            <Label text="Título" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+      <Label layoutX="126.0" layoutY="231.0" text="Empréstimo">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <GridPane layoutX="358.0" layoutY="261.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.20001220703125" minWidth="10.0" prefWidth="37.5999755859375" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="162.4000244140625" minWidth="10.0" prefWidth="162.4000244140625" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <TextField fx:id="idTextReserva" GridPane.columnIndex="1" />
+            <TextField fx:id="tituloTextReserva" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label text="ID" />
+            <Label text="Título" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+      <Label layoutX="427.0" layoutY="237.0" text="Próxima Reserva">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="encontrouLivro" layoutX="252.0" layoutY="158.0" textFill="#df0c0c" />
+      <TextField fx:id="idTextField" layoutX="289.0" layoutY="188.0" prefHeight="26.0" prefWidth="42.0" promptText="ID" style="-fx-background-color: transparent; -fx-border-color: #000000; -fx-border-width: 0px 0px 1px 0px;" />
+   </children>
+</AnchorPane>
