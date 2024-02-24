@@ -101,7 +101,7 @@ public class Livro implements Serializable {
         return usuariosReservados;
     }
 
-    
+
     public void adicionarReserva(Usuario usuario) {
         usuariosReservados.add(usuario);
     }
