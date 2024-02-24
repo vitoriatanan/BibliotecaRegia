@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BibliotecaRegia.Controller.RegistrarEmprestimosController">
+   <children>
+      <Label layoutX="23.0" layoutY="82.0" text="Empréstimo">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <TextField fx:id="pesquisarIDTextField" layoutX="23.0" layoutY="114.0" prefHeight="26.0" prefWidth="186.0" promptText="ID" style="-fx-background-color: transparent; -fx-border-color: #000000; -fx-border-width: 0px 0px 1px 0px;" />
+      <Pane prefHeight="78.0" prefWidth="600.0" style="-fx-background-color: #EDDECD;">
+         <children>
+            <ImageView fx:id="logoImageView" fitHeight="86.0" fitWidth="78.0" layoutX="8.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../resources/imagem/logo.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="103.0" layoutY="24.0" text="BIBLIOTECA RÉGIA" textFill="#863d3d">
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutY="321.0" prefHeight="78.0" prefWidth="600.0" style="-fx-background-color: #EDDECD;">
+         <children>
+            <ButtonBar layoutX="142.0" layoutY="19.0" prefHeight="40.0" prefWidth="317.0">
+               <buttons>
+                  <Button fx:id="botaoRegistrar" mnemonicParsing="false" onAction="#botaoRegistrarOnAction" prefHeight="27.0" prefWidth="153.0" style="-fx-background-color: #863d3d; -fx-border-color: #000000;" text="Registrar" textFill="WHITE" />
+                  <Button fx:id="botaoVoltar" mnemonicParsing="false" onAction="#botaoVoltarOnAction" prefHeight="27.0" prefWidth="153.0" style="-fx-background-color: #863d3d; -fx-border-color: #000000;" text="Voltar" textFill="WHITE" />
+               </buttons>
+            </ButtonBar>
+         </children>
+      </Pane>
+      <TextField fx:id="livroTextField" layoutX="23.0" layoutY="168.0" prefHeight="26.0" prefWidth="247.0" promptText="Livro" style="-fx-background-color: transparent; -fx-border-color: #000000; -fx-border-width: 0px 0px 1px 0px;" />
+      <DatePicker fx:id="dataEmprestimoDatePicker" layoutX="25.0" layoutY="220.0" prefHeight="26.0" prefWidth="247.0" style="-fx-background-color: #863d3d;" />
+      <Label layoutX="25.0" layoutY="199.0" text="Data de Empréstimo" />
+      <DatePicker fx:id="dataDevolucaoDatePicker" layoutX="23.0" layoutY="270.0" prefHeight="26.0" prefWidth="247.0" style="-fx-background-color: #863d3d;" />
+      <Label layoutX="25.0" layoutY="249.0" text="Data de Devolução" />
+      <Button fx:id="botaoPesquisar" layoutX="216.0" layoutY="107.0" mnemonicParsing="false" onAction="#botaoPesquisarOnAction" style="-fx-background-color: #863d3d; -fx-border-color: #000000;" textFill="WHITE">
+         <graphic>
+            <ImageView fx:id="pesquisarImageView" fitHeight="24.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../resources/imagem/pesquisarWhite.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label fx:id="labelPesquisa" layoutX="34.0" layoutY="147.0" style="-fx-background-color: transparent;" textFill="#df0c0c" />
+      <Label fx:id="labelMensagem" layoutX="53.0" layoutY="300.0" style="-fx-background-color: transparent;" textFill="#df0c0c" />
+      <ImageView fx:id="leitorImageView" fitHeight="180.0" fitWidth="186.0" layoutX="352.0" layoutY="116.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../resources/imagem/leitor.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
