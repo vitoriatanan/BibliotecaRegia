@@ -74,11 +74,7 @@ Compile e execute a aplicação.
 A aplicação será inicializada em uma janela gráfica (JavaFX). Utilize a interface para acessar as funcionalidades de gerenciamento da biblioteca.
 
 **Contribuições**
-Este projeto foi desenvolvido como uma colaboração entre mim (autor) e minha colega Vitória Tanam. Se você deseja contribuir, sinta-se à vontade para abrir Issues ou enviar Pull Requests.
-
-GitHub do autor: Seu GitHub
-
-GitHub da Vitória Tanam: Vitória Tanam - GitHub
+Este projeto foi desenvolvido como uma colaboração por Matheus Santana e Vitória Tanam. Se você deseja contribuir, sinta-se à vontade para abrir Issues ou enviar Pull Requests.
 
 **Possíveis Melhorias**
 Estruturar o código de maneira mais modular.
