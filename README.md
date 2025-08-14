@@ -1,91 +1,95 @@
+---
 
-**BibliotecaRegia - API de Gerenciamento de Biblioteca**
+# 📚 BibliotecaRegia - API de Gerenciamento de Biblioteca
 
-Este projeto consiste em uma aplicação Java para o gerenciamento de uma biblioteca, com funcionalidades como controle de usuários, empréstimos de livros, registro de livros e multas. O sistema foi desenvolvido como parte de um trabalho acadêmico para a disciplina de PBL (Aprendizagem Baseada em Problemas), do curso de Engenharia de Computação na Universidade Estadual de Feira de Santana (UEFS).
+Este projeto é uma aplicação **Java** desenvolvida para o **gerenciamento de bibliotecas**, oferecendo recursos como controle de usuários, empréstimos, registro de livros, reservas e controle de multas.
 
-O desenvolvimento foi realizado em dupla, com a colaboração de Vitória Tanam. Você pode acessar o perfil da minha colega e contribuir para o projeto através de seu GitHub: Vitória Tanam - GitHub.
+Foi criado como parte de um **trabalho acadêmico** para a disciplina de **PBL (Aprendizagem Baseada em Problemas)**, no curso de **Engenharia de Computação** da **Universidade Estadual de Feira de Santana (UEFS)**.
 
-**Funcionalidades**
-A API oferece diversas funcionalidades, incluindo:
+> 👥 Desenvolvimento em dupla com **[Vitória Tanam](https://github.com/VitoriaTanam)**.
 
-**Controle de Usuários:**
+---
 
-Cadastro de novos usuários
+## ✨ Funcionalidades
 
-Alteração de dados de usuários
+### 👤 Controle de Usuários
 
-Exclusão de usuários
+* Cadastro de novos usuários
+* Alteração de dados
+* Exclusão de usuários
 
-**Controle de Operadores:**
+### 🛠️ Controle de Operadores
 
-Cadastro de operadores
+* Cadastro de operadores
+* Alteração de operadores
+* Exclusão de operadores
 
-Alteração de operadores
+### 📖 Empréstimos
 
-Exclusão de operadores
+* Registro de novos empréstimos
+* Renovação de empréstimos
+* Exclusão de empréstimos
 
-**Empréstimos:**
+### 📚 Gerenciamento de Acervo
 
-Registro de novos empréstimos
+* Registro de novos livros
+* Reserva de livros
 
-Renovação de empréstimos
+### 💰 Multas e Relatórios
 
-Exclusão de empréstimos
+* Cadastro e controle de multas
+* Geração de relatórios de livros e usuários
 
-**Gerenciamento de Acervo:**
+---
 
-Registro de novos livros
+## 🛠️ Tecnologias Utilizadas
 
-Reserva de livros
+* **Java** – Linguagem principal
+* **JavaFX** – Interface gráfica (GUI)
+* **FXML** – Estrutura de layout da interface
+* **Scene Builder** – Construção das telas
+* **POO (Programação Orientada a Objetos)** – Organização e modularização do código
 
-**Multas e Relatórios:**
+---
 
-Cadastro e controle de multas
+## ⚠️ Observações
 
-Geração de relatórios sobre livros e usuários
+Este projeto foi criado para fins de **aprendizado**, podendo conter abordagens que não seguem as melhores práticas inicialmente, mas que foram sendo corrigidas ao longo do desenvolvimento.
 
-**Tecnologias Utilizadas**
-Java: Linguagem de programação principal.
+---
 
-JavaFX: Biblioteca para criação de interfaces gráficas (GUI).
+## 🚀 Como Executar
 
-FXML: Arquivo de definição de layout da interface.
+1. **Clone o repositório**
 
-Scene Builder: Ferramenta para criação de interfaces gráficas no JavaFX, utilizada para facilitar a construção das telas.
+   ```bash
+   git clone https://github.com/seu-usuario/BibliotecaRegia.git
+   ```
+2. Abra o projeto em uma IDE Java (IntelliJ IDEA, Eclipse, etc.)
+3. Compile e execute a aplicação
+4. A interface gráfica será aberta e você poderá acessar as funcionalidades
 
-POO (Programação Orientada a Objetos): Estrutura de desenvolvimento, visando modularizar e organizar o código.
+---
 
-**Observações Importantes**
-Este projeto foi desenvolvido como parte de um trabalho acadêmico e, devido à natureza de aprendizado e experimentação com a lógica de Programação Orientada a Objetos (POO), podem existir erros estruturais e algumas abordagens que não seguem as melhores práticas de desenvolvimento. Estes pontos são naturais em projetos de início de estudos e foram corrigidos e ajustados conforme o aprendizado ao longo da implementação.
+## 🤝 Contribuições
 
-**Como Executar**
-Para executar a aplicação, siga os seguintes passos:
+Este projeto foi desenvolvido por **Matheus Santana** e **[Vitória Tanam](https://github.com/VitoriaTanam)**.
+Contribuições são bem-vindas! Abra uma *Issue* ou envie um *Pull Request*.
 
-**Clone o repositório:**
+---
 
-bash
-Copiar
-Editar
-git clone https://github.com/seu-usuario/BibliotecaRegia.git
-Abra o projeto em uma IDE Java (como IntelliJ IDEA ou Eclipse).
+## 📌 Possíveis Melhorias
 
-Compile e execute a aplicação.
+* Melhor modularização do código
+* Refatoração e organização de classes
+* Melhoria da usabilidade e design da interface
+* Implementação de autenticação e permissões mais robustas
 
-A aplicação será inicializada em uma janela gráfica (JavaFX). Utilize a interface para acessar as funcionalidades de gerenciamento da biblioteca.
+---
 
-**Contribuições**
-Este projeto foi desenvolvido como uma colaboração por Matheus Santana e Vitória Tanam. Se você deseja contribuir, sinta-se à vontade para abrir Issues ou enviar Pull Requests.
+## 📄 Licença
 
-**Possíveis Melhorias**
-Estruturar o código de maneira mais modular.
+Este projeto está licenciado sob a **MIT License**.
 
-Melhorar a organização das classes e refatoração do código.
+---
 
-Corrigir problemas de usabilidade e melhorar o design da interface gráfica.
-
-Implementar autenticação e controle de permissões de usuários de forma mais robusta.
-
-**Licença**
-Este projeto é licenciado sob a MIT License.
-
-**Nota: O sistema está em constante evolução, e futuras atualizações podem resolver problemas estruturais ou adicionar novas funcionalidades.**
